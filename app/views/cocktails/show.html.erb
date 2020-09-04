@@ -1,8 +1,30 @@
 <div class="container m-3">
   <h1>Cocktail Information</h1>
 
-  <p>Name: <%= @cocktail.name %></p>
+  <p>Name: <%= @cocktail.name %> <%= link_to icon('fa', 'edit'), edit_cocktail_path(@cocktail) %></p>
+  
+  <h3>Doses</h3>
+  <% @doses.each do |dose| %>
+  <%# @cocktail.doses.each %>
+  <p><%= dose.description %> | <%= dose.ingredient.name %> | <%= link_to icon('fa', 'trash-alt'), dose_path(dose) %></p>
+  <% end %>
 
-  <%= link_to "Back", cocktails_path, class: "btn btn-primary" %> | 
-  <%= link_to "Add dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+  <%= link_to "Back", cocktails_path, class: "btn btn-primary" %>
+</div>
+
+<div class="container m-3">
+  <h2>Add a dose</h2>
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    
+    <div class="form-inputs">
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-primary" %>
+    </div>
+  <% end %>
 </div>

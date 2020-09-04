@@ -5,7 +5,10 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
   
-  def show; end
+  def show
+    @doses = @cocktail.doses
+    @dose = Dose.new
+  end
   
   def new
     @cocktail = Cocktail.new
@@ -25,7 +28,6 @@ class CocktailsController < ApplicationController
     redirect_to cocktail_path(@cocktail)
   end
   
-
   private
 
   def set_cocktail
