@@ -6,7 +6,7 @@
   <h3>Doses</h3>
   <% @doses.each do |dose| %>
   <%# @cocktail.doses.each %>
-  <p><%= dose.description %> | <%= dose.ingredient.name %> | <%= link_to icon('fa', 'trash-alt'), dose_path(dose) %></p>
+  <p><%= dose.description %> | <%= dose.ingredient.name %> | <%= link_to icon('fa', 'trash-alt'), dose_path(dose), method: :delete %></p>
   <% end %>
 
   <%= link_to "Back", cocktails_path, class: "btn btn-primary" %>
