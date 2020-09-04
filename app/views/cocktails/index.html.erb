@@ -1,12 +1,36 @@
-<div class="container m-3">
-  <h1>Cocktails</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.timeout.com/images/103426100/image.jpg);">
+  <div class="container p-5">
+    <h1>Welcome to <strong>Mrs. Cocktails</strong></h1>
+    <p>View cocktail recipes from around the world. Contribute by adding your own cocktail recipe!</p>
 
-  <div class="container">
+    <div class="btn btn-add">
+      <%= link_to "Mix a cocktail", new_cocktail_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+<div class="container" id="cards-div">
+  <div class="cards">
     <% @cocktails.each do |cocktail| %>
-    <p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+      <% if cocktail.photo.attached? %>
+        <% picture_url = cl_image_path cocktail.photo.key %>
+      <% end %>
+
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('http://<%= picture_url %>');">
+        <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
+      </div>
     <% end %>
   </div>
-
-  <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-primary" %>
-
 </div>
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This website is made with <i class="fas fa-heart"></i> by Sharon
+  </div>
+</div>
+

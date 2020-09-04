@@ -1,5 +1,9 @@
 <div class="container m-3">
-  <h1>Create a cocktail</h1>
+  <%= link_to "⬅ Back", cocktails_path, class: "btn btn-dark" %>
+</div>
+
+<div class="container mx-3 my-5">
+  <h1>Mix a cocktail</h1>
   <%= simple_form_for(@cocktail) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
@@ -17,6 +21,4 @@
     </div>
 
   <% end %>
-  <br>
-  <%= link_to "Back", cocktails_path, class: "btn btn-primary" %>
 </div>

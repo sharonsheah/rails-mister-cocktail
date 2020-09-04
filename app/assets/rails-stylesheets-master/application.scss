@@ -11,3 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+h1, h2, h3 {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+p, a {
+  font-family: 'Open Sans', sans-serif;
+}

@@ -10,9 +10,25 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Open+Sans&display=swap" rel="stylesheet">
   </head>
 
   <body>
+    <div class="navbar navbar-expand-sm navbar-dark bg-dark navbar-lewagon">
+      <%= link_to "🍸 Mrs Cocktails", cocktails_path, class: "navbar-brand" %>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to "Mix a cocktail", new_cocktail_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Back to top", "#", class: "nav-link" %>
+          </li>
+        </ul>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
