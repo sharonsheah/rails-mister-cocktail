@@ -12,6 +12,10 @@
 @import "components/index";
 @import "pages/index";
 
+body { 
+  padding-top: 56px; 
+}
+
 h1, h2, h3 {
   font-family: 'Kumbh Sans', sans-serif;
 }
@@ -19,3 +23,100 @@ h1, h2, h3 {
 p, a {
   font-family: 'Open Sans', sans-serif;
 }
+
+img {
+  max-width: 100%;
+  position: relative;
+  z-index: -5;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  #cocktail-header h1, a {
+    align-items: center;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+  }
+
+  .banner {
+    align-items: flex-start;
+  }
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Footer
+.footer {
+  background: #741C28;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  padding: 0px 50px;
+  color: white;
+  opacity: 0.8;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+.footer-links a {
+  color: white;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 0px 10px;
+}
+.footer-links a:hover {
+  opacity: 1;
+}
+.footer .fa-heart {
+  color: #D23333;
+}
+
