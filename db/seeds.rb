@@ -1,6 +1,8 @@
 require 'json'
 require 'open-uri'
 
+puts "Creating ingredients manually..."
+
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
