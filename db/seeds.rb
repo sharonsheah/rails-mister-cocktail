@@ -1,10 +1,11 @@
+require 'json'
+require 'open-uri'
+
 puts "Cleaning database..."
 
 Ingredient.destroy_all
 
 puts "Creating ingredients from API..."
-require 'json'
-require 'open-uri'
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 ingredients_serialised = open(url).read
