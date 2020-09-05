@@ -15,7 +15,7 @@
   <div class="container" id="cards-div">
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
-        <div class="card-category" data-aos="zoom-in-up" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/featured/?cocktail');">
+        <div class="card-category" data-aos="fade-up" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/featured/?cocktail');">
           <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
         </div>
       <% end %>
