@@ -3,7 +3,8 @@
 </div>
 
 <div class="container m-3">
-  <h1><%= @cocktail.name %> <%= link_to icon('fa', 'edit'), edit_cocktail_path(@cocktail) %></h1>
+  <h1><%= @cocktail.name %></h1>
+  <p><%= link_to icon('fa', 'edit'), edit_cocktail_path(@cocktail), class:"btn btn-primary" %> | <%= link_to icon('fa', 'trash-alt'), cocktail_path(@cocktail), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %></p>
 </div>
 
 <div class="container">

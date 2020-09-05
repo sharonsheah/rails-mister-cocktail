@@ -3,6 +3,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    
   end
   
   def show
@@ -26,6 +27,13 @@ class CocktailsController < ApplicationController
   def update
     @cocktail.update(cocktail_params)
     redirect_to cocktail_path(@cocktail)
+  end
+
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+
+    redirect_to cocktails_path
   end
   
   private
