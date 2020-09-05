@@ -1,9 +1,10 @@
 require 'json'
 require 'open-uri'
 
-puts "Cleaning database..."
-
-Ingredient.destroy_all
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "watermelon")
 
 puts "Creating ingredients from API..."
 
@@ -13,4 +14,4 @@ ingredients = JSON.parse(ingredients_serialised)
 ingredients_arr = ingredients.first[1]
 ingredients_arr.each { |ingredient| Ingredient.create(name: ingredient["strIngredient1"]) }
 
-puts "Created #{Ingredient.count} ingredients from API"
+puts "Created #{Ingredient.count} ingredients"
