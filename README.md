@@ -10,17 +10,11 @@
 
 * Draw schema with n:n relationships
 
-* Created rails app
+* Use of command line to create rails app
 
-* Implemented Active Record Storage
+* MVC framework (db -> model -> routes -> controller -> view)
 
-* Utilise Cloudinary for photo cloud storage
-
-* Installed gem packages (autoprefixer, font-awesome, simple_form etc)
-
-* Used rails helpers (link_to, simple_form_for)
-
-* Test on rails s & rails c
+* Tested on rails s & rails c
 
 * Implemented UI using HTML, SCSS, aos, Bootstrap
 
@@ -28,9 +22,21 @@
 
 * Ruby 2.6.6
 
+* Rails 6.0.3.2
+
+* yarn
+
+* npm
+
+* RubyGems (autoprefixer, font-awesome, simple_form etc)
+
+* Used rails helpers (link_to, simple_form_for)
+
 # Database 
 
-* postgreSQL
+* postgreSQL & Active Record Storage
+
+* Cloudinary for photo cloud storage
 
 # Deployment
 
