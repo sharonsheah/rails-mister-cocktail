@@ -1,12 +1,16 @@
 require 'json'
 require 'open-uri'
 
+puts "Cleaning database..."
+
+Ingredient.destroy_all
+
 puts "Creating ingredients manually..."
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "watermelon")
+Ingredient.create(name: "Lemon")
+Ingredient.create(name: "Ice")
+Ingredient.create(name: "Mint leaves")
+Ingredient.create(name: "Watermelon")
 
 puts "Creating ingredients from API..."
 
