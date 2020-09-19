@@ -1,16 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1566284628402-3f0895b3eb28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=944&q=80);">
-  <div class="container p-5" id="banner-text">
-    <h1>Welcome to <strong>Mrs. Cocktails</strong></h1>
-    <p>View cocktail recipes from around the world. Contribute by adding your own cocktail recipe!</p>
+<div class="banner">
+  <h1 class="animate__animated animate__wobble">Welcome to <strong>Mrs. Cocktails</strong></h1>
+  <p>View cocktail recipes from around the world. Contribute by adding your own cocktail recipe!</p>
 
-    <div class="btn btn-add">
-      <%= link_to "Mix a cocktail", new_cocktail_path, class: "btn btn-info px-3 py-2" %>
-    </div>
+  <div class="btn btn-add">
+    <%= link_to "Mix a cocktail", new_cocktail_path, class: "btn btn-info px-3 py-2" %>
   </div>
 </div>
 
 <%# <%= cl_image_path cocktail.photo.key %>
-
 <div class="container">
   <div class="container" id="cards-div">
     <div class="cards">

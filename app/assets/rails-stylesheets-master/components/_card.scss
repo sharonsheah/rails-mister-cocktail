@@ -1,0 +1,32 @@
+#cards-div {
+  margin: 40px 0;
+  justify-content: space-around;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+  h3 {
+    text-align: center;
+    padding: 50px 20px;
+
+    a {
+      color: white;
+      font-family: 'Kumbh Sans', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  h3 :hover {
+    text-decoration: none;
+    color: #741C28;
+    opacity: 0.8;
+  }
+}
+
+.card-category {
+  border-radius: 10px;
+}
